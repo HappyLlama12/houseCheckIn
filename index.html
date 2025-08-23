@@ -489,6 +489,7 @@ input:checked + .slider:before {
      setTimeout(() => {
   if (reasonSection.style.display === 'block') {
     reasonSection.style.display = 'none';
+    const name = nameInput.value.trim();
     const phone = document.getElementById('phone').value.trim();
     const email = document.getElementById('email').value.trim();
     const birthday = document.getElementById('birthday').value;
