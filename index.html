@@ -66,6 +66,10 @@ INSTRUCTIONS:
   z-index: 1;
 }
 
+html, body{
+  overflow:hidden;
+}
+
 body {
   margin: 0;
   padding: 20px;        /* adds breathing room from top/edges */
@@ -73,6 +77,9 @@ body {
   z-index: 2;
   font-size: 13px;
   overflow-y: auto;      /* ensures scroll if content taller than screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Your card */
@@ -82,8 +89,8 @@ body {
   width: 400px;
   max-width: 92vw;
   background: var(--card);
-  padding: 14px;
-  border-radius: 10px;
+  padding: 18px;
+  border-radius: 12px;
   box-shadow: 0 6px 18px rgba(0,0,0,.08);
   text-align: left;
   font-size: 130%;
@@ -96,12 +103,13 @@ body {
     }
     /* Only h1 uses Neue Montreal */
     h1 {
-      margin: 0 0 0;             /* Remove bottom margin */
-      margin-bottom: 12px;       /* more space below heading */
+      margin: 6px 0 18px 0;
+      /*margin-top: 6px;            /* Remove bottom margin */
+      /*margin-bottom: 16px;       /* more space below heading */
       font-family: 'Neue Montreal', system-ui, sans-serif;
-      font-weight: 750;
+      font-weight: 850;
       font-style: normal;
-      font-size: 32px;           /* Desktop font size */
+      font-size: 38px;           /* Desktop font size */
       line-height: 1em;
       letter-spacing: -0.5px;
       color: rgb(5, 49, 154);    /* Optional: add this if you want the blue color */
@@ -172,13 +180,14 @@ button.action,
       font-family: Gilroy, Arial, Helvetica, sans-serif;
       color: rgb(52, 58, 64);
       font-weight: 500;  /* normal weight */
-      font-size: 12px;
+      font-size: 14px;
       margin-left: 8px;
+      margin-bottom: 4px;
       user-select: none; /* optional, if you want to prevent text selection */
       vertical-align: middle; /* to align with the toggle nicely */
     }
       #eraseLink {
-        margin-top: 16px;
+        margin-top: 4px;
         font-size: 12px;
         color: rgb(52,58,64);
       }
